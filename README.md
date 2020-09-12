@@ -1,9 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `yarn start`
 
 Runs the app in the development mode.<br />
@@ -12,57 +6,43 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `yarn test`
+## Header
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[] Logo e Menu hambúrguer. Quando clickarmos no menu, uma layer deve ser aberta e o menu exibido exatamente de acordo com o elemento do layout.
+[] Os links do menu são fictícios, crie somente a navegação e seus elementos de forma semântica e acessível.
+[] Ao clickar no botão fechar, deve fechar o menu como de praxe.
+[] Extra Responsivo: O menu deve ser hamburguer para mobile, em desktop ele deve ser visível o tempo inteiro, use seus conhecimentos de interface para isso.
+[] Extra: Quando clickar na layer preta transparente, o menu deve ser fechado.
 
-### `yarn build`
+## Slideshow de vídeos
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[] Um player nativo deve ser executado com o vídeo em anexo. Obs: O vídeo foi retirado do site da Prodigious, para os slides seguintes, insira outros de sua preferência.
+[] Quando trocar de slide, o vídeo anterior deve ser paralizado.
+Os controles do player podem ser nativos, não precisa customizar nada.
+[] Extra: customizar os controles.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Texto descritivo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[X] Parágrafo símples com alguns trechos em destaque.
+[] Extra Responsivo: A fonte deve se adaptar aos diferentes tamanhos de tela
+Portfólio
 
-### `yarn eject`
+## Lista de projetos da Prodigious global.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodigious.com/
+[] Extra: Colocamos um botão de carregar mais itens de portfolio. Esta ação é possível caso sua lista seja servida com um JSON ou uma request do backend do contrário a dificuldade aumenta. Este item também não é obrigatório.
+[] Extra Responsivo: De acordo com o tamanho da tela, mostrar mais colunas. Ex: Mobile: 1 coluna, tablet duas colunas, desktop 3 colunas.
+[] Filtro: Colocamos um filtro de categorias(campo azul com all escrito), mas é um extra caso você esteja listando os elementos a partir de um JSON. Categorias podem ser vistas em https://portfolio.prodigious.com/ também, use sua criatividade, mas não é uma feature obrigatória.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Formulário
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[X] Deve ser feita a validação dos campos de acordo com seu tipo, deixamos um exemplo de erro no layout.
+[X] Deve ser feito um submit em caso de formulário validado.
+[] Mensagem de sucesso deve ser mostrada após o envio.
+[] Extra: Criar um Mock de um POST é um extra totalmente não obrigatório. Como sugestão para simular o POST indico https://www.mockable.io/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Cookies
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[] Elemento presente no load da tela, fixo(fixed) na parte de baixo da viewport.
+[X] Ao clickar no botão elemento deve ser excluído da tela.
+[] Extra: Ao recarregar a tela, caso o usuário já tenha aceitado o uso de cookies, a layer não deve aparecer mais. Execute essa tarefa como quiser.

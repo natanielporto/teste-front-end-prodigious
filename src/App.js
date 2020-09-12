@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import NavBar from "./Components/NavBar/NavBar.jsx";
+import MiddleSection from "./Components/MiddleSection/MiddleSection.jsx";
+import Cookies from "./Components/Cookies/Cookies.jsx";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [cookie, setCookie] = useState(true);
+
+  const handleCookies = ({ target }) => {
+    const clicked = target.innerText;
+    setCookie(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <NavBar />
       </header>
+      <body>
+        <MiddleSection />
+      </body>
+      <footer>{cookie && <Cookies handleCookies={handleCookies} />}</footer>
     </div>
   );
 }

@@ -59,12 +59,20 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledButton = styled.button`
-  background-color: pink;
   border: none;
   width: 150px;
-  height: 150px;
+  height: 50px;
   border-radius: 6px;
   margin-right: 16px;
   font-size: 16px;
   color: black;
+  background: ${(props) => props.color};
+  color: white;
+  opacity: ${(props) => (props.disabled ? 0.3 : 1)};
+`;
+
+export const StateButtons = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 0;
 `;

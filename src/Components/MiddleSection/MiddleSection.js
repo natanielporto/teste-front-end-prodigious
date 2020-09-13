@@ -6,7 +6,6 @@ export const StyledVideo = styled.section`
 `;
 
 export const StyledContainer = styled.section`
-  max-width: 1200px;
   margin: 40px auto;
   display: flex;
   justify-content: space-around;

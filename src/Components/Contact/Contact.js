@@ -71,4 +71,6 @@ export const StyledH3 = styled.h3`
   border-radius: 5px;
   background-color: #fd2d39;
   color: white;
+  padding: 16px;
+  margin-bottom: 16px;
 `;

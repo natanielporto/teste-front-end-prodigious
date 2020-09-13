@@ -4,7 +4,9 @@
 }
 
 body {
-  font-family: Gotham, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .styledLabel {

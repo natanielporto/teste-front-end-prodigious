@@ -3,7 +3,7 @@ import { StyledButton, StyledSection } from "./Cookies";
 
 const Cookies = ({ handleCookies }) => {
   return (
-    <div className="p-absolute">
+    <div>
       <StyledSection>
         <div>
           <p className="mx-3 my-0">This website uses cookies:</p>

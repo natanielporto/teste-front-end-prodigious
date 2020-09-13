@@ -9,8 +9,8 @@ import SectionTabs from "../SectionTabs/SectionTabs.jsx";
 const MiddleSection = () => {
   const [btns, setBtns] = useState([
     { id: 1, name: "\\ About", bg: false },
-    { id: 2, name: "\\ Portfolio", bg: false },
-    { id: 3, name: "\\ Contact", bg: true },
+    { id: 2, name: "\\ Portfolio", bg: true },
+    { id: 3, name: "\\ Contact", bg: false },
     { id: 4, name: "\\ Our Network", bg: false },
   ]);
 

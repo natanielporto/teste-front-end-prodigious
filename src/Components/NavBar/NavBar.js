@@ -21,9 +21,6 @@ export const StyledButton = styled.button`
     opacity: 1;
     transition: 1s;
   }
-
-  &:mouse {
-  }
 `;
 
 export const Navbar = styled.header`

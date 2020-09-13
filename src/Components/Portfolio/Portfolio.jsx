@@ -8,6 +8,7 @@ import {
   WorkContainer,
   StyledButton,
   StateButtons,
+  StyledInput,
 } from "./PortfolioBig";
 import {
   StyledImgContainerRow,
@@ -16,21 +17,19 @@ import {
   WorkContainerRow,
 } from "./PortfolioRow";
 
-const treatNames = data.map((el) => el.split(".")).map((el) => el[0]);
-
-// const initNames = data.slice(0, 19).map((item) => {
-//   return <FilmItem key={item.id} film={item} />;
-// });
-
-const color = ["#81BC41", "#F68720", "#EE2F3D", "#572185", "#1380A5"];
-
 const Portfolio = () => {
+  const [names, setNames] = useState(data);
+  const [arr, setArr] = useState(imgs);
   const [number, setNumber] = useState(19);
-  const [row, setRow] = useState(true);
+  const [row, setRow] = useState(false);
+
+  const treatNames = names.map((el) => el.split(".")).map((el) => el[0]);
+
+  const color = ["#81BC41", "#F68720", "#EE2F3D", "#572185", "#1380A5"];
 
   const handleMore = ({ target }) => {
     if (target.innerText === "Show more?") {
-      if (number <= imgs.length) setNumber(number + 10);
+      if (number <= arr.length) setNumber(number + 10);
     } else {
       if (number < 0) setNumber(0);
       if (number > 0) setNumber(number - 10);
@@ -42,31 +41,43 @@ const Portfolio = () => {
     row ? console.log("true") : console.log("false");
   };
 
+  const handleSearch = (event) => {
+    const search = event.target.value;
+    if (event.keyCode === 13) {
+      setArr(imgs.filter((el) => el.includes(search.toLowerCase())));
+      setNames(data.filter((el) => el.includes(search.toLowerCase())));
+    }
+  };
+
   return (
     <div>
       {!row && (
         <StyledDiv className="row">
-          {imgs.slice(0, Number(number)).map((el, index) => (
+          {arr.slice(0, Number(number)).map((el, index) => (
             <WorkContainer className="col-4 m-0 p-0">
               <StyledImgContainer
                 color={color[Math.floor(Math.random() * color.length)]}
               >
                 {treatNames[index].toUpperCase()}
-                {/* <Square>'</Square> */}
               </StyledImgContainer>
               <StyledImg src={`/Imgs/${el}`} />
             </WorkContainer>
           ))}
           <StateButtons>
+            <StyledInput
+              color={color[Math.floor(Math.random() * color.length)]}
+              type="text"
+              placeholder="Search by brand"
+              onKeyDown={handleSearch}
+            />
             <StyledButton
-              // disabled={number < imgs.length ? false : true}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleToRow}
             >
               {row ? "Display: big" : "Display: rows"}
             </StyledButton>
             <StyledButton
-              disabled={number < imgs.length ? false : true}
+              disabled={number < arr.length ? false : true}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleMore}
             >
@@ -84,7 +95,7 @@ const Portfolio = () => {
       )}
       {row && (
         <StyledDivRow className="row">
-          {imgs.slice(0, Number(number)).map((el, index) => (
+          {arr.slice(0, Number(number)).map((el, index) => (
             <WorkContainerRow className="col-4">
               <div>
                 <StyledImgRow src={`/Imgs/${el}`} />
@@ -98,15 +109,20 @@ const Portfolio = () => {
             </WorkContainerRow>
           ))}
           <StateButtons>
+            <StyledInput
+              color={color[Math.floor(Math.random() * color.length)]}
+              type="text"
+              placeholder="Search by brand"
+              onKeyDown={handleSearch}
+            />
             <StyledButton
-              // disabled={number < imgs.length ? false : true}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleToRow}
             >
               {row ? "Display: big" : "Display: rows"}
             </StyledButton>
             <StyledButton
-              disabled={number < imgs.length ? false : true}
+              disabled={number < arr.length ? false : true}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleMore}
             >

@@ -76,3 +76,29 @@ export const StateButtons = styled.div`
   bottom: 20px;
   right: 0;
 `;
+
+export const StyledInput = styled.input`
+  border: none;
+  width: 85px;
+  height: 50px;
+  border-radius: 6px;
+  margin-right: 16px;
+  font-size: 16px;
+  padding: 16px;
+  color: white;
+  background-color: ${(props) => props.color};
+
+  &:hover {
+    width: 250px;
+    transition: 1s;
+  }
+
+  &:focus {
+    width: 250px;
+    transition: 1s;
+  }
+
+  &::placeholder {
+    text-align: center;
+  }
+`;

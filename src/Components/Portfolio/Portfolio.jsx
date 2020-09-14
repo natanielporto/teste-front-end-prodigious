@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { imgs } from "./Imgs";
 import { data } from "./Data";
 import {
-  StyledImgContainer,
+  StyledEffect,
   StyledImg,
   StyledDiv,
   WorkContainer,
@@ -11,7 +11,7 @@ import {
   StyledInput,
 } from "./PortfolioBig";
 import {
-  StyledImgContainerRow,
+  StyledEffectRow,
   StyledImgRow,
   StyledDivRow,
   WorkContainerRow,
@@ -55,12 +55,17 @@ const Portfolio = () => {
         <StyledDiv className="row">
           {arr.slice(0, Number(number)).map((el, index) => (
             <WorkContainer className="col-4 m-0 p-0">
-              <StyledImgContainer
+              <StyledEffect
                 color={color[Math.floor(Math.random() * color.length)]}
               >
                 {treatNames[index].toUpperCase()}
-              </StyledImgContainer>
-              <StyledImg src={`/Imgs/${el}`} />
+              </StyledEffect>
+              <StyledImg
+                src={`/Imgs/${el}`}
+                alt={`Image from the ${treatNames[
+                  index
+                ].toUpperCase()} campaign.`}
+              />
             </WorkContainer>
           ))}
           <StateButtons>
@@ -84,7 +89,7 @@ const Portfolio = () => {
               Show more?
             </StyledButton>
             <StyledButton
-              disabled={number <= 10 ? true : false}
+              isabled={arr < 10 || number < 10 ? true : false}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleMore}
             >
@@ -100,12 +105,11 @@ const Portfolio = () => {
               <div>
                 <StyledImgRow src={`/Imgs/${el}`} />
               </div>
-              <StyledImgContainerRow
+              <StyledEffectRow
                 color={color[Math.floor(Math.random() * color.length)]}
               >
                 {treatNames[index].toUpperCase()}
-                {/* <Square>'</Square> */}
-              </StyledImgContainerRow>
+              </StyledEffectRow>
             </WorkContainerRow>
           ))}
           <StateButtons>
@@ -129,7 +133,7 @@ const Portfolio = () => {
               Show more?
             </StyledButton>
             <StyledButton
-              disabled={number <= 10 ? true : false}
+              disabled={arr < 10 || number < 10 ? true : false}
               color={color[Math.floor(Math.random() * color.length)]}
               onClick={handleMore}
             >

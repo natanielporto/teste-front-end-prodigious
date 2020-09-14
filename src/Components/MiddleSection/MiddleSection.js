@@ -7,8 +7,6 @@ export const StyledVideo = styled.section`
 
 export const StyledContainer = styled.section`
   margin: 40px auto;
-  display: flex;
-  justify-content: space-around;
   color: ${(props) => (props.color ? props.color : "white")};
 `;
 

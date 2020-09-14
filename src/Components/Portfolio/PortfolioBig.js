@@ -16,19 +16,12 @@ export const WorkContainer = styled.div`
   margin: 0;
 `;
 
-// export const Square = styled.div`
-//   width: 30px;
-//   height: 30px;
-//   background: pink;
-//   z-index: 999;
-//   transform: rotate(45deg);
-// `;
-
-export const StyledImgContainer = styled.div`
+export const StyledEffect = styled.div`
   height: 90px;
   margin: 0;
   width: 640px;
   display: flex;
+  background: black;
   justify-content: space-around;
   align-items: center;
 
@@ -75,6 +68,7 @@ export const StateButtons = styled.div`
   position: fixed;
   bottom: 20px;
   right: 0;
+  z-index: 2;
 `;
 
 export const StyledInput = styled.input`

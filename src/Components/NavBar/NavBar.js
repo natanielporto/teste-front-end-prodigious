@@ -1,5 +1,19 @@
 import styled from "styled-components";
 
+export const Navbar = styled.header`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 70px;
+`;
+
+export const StyledH1 = styled.button`
+  background-color: #e5e5e5;
+  border: none;
+`;
+
 export const StyledButton = styled.button`
   background-color: black;
   margin-right: 16px;
@@ -21,13 +35,11 @@ export const StyledButton = styled.button`
     opacity: 1;
     transition: 1s;
   }
-`;
 
-export const Navbar = styled.header`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #e5e5e5;
-  width: 100%;
-  height: 70px;
+  &:focus {
+    color: white;
+    border-radius: 6px;
+    opacity: 1;
+    max-width: 140px;
+  }
 `;

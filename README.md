@@ -16,8 +16,8 @@ You will also see any lint errors in the console.
 
 ## Slideshow de vídeos
 
-[ ] Um player nativo deve ser executado com o vídeo em anexo. Obs: O vídeo foi retirado do site da Prodigious, para os slides seguintes, insira outros de sua preferência.<br />
-[ ] Quando trocar de slide, o vídeo anterior deve ser paralizado.
+[X] Um player nativo deve ser executado com o vídeo em anexo. Obs: O vídeo foi retirado do site da Prodigious, para os slides seguintes, insira outros de sua preferência.<br />
+[X] Quando trocar de slide, o vídeo anterior deve ser paralizado.
 Os controles do player podem ser nativos, não precisa customizar nada.<br />
 [ ] Extra: customizar os controles.<br />
 
@@ -32,7 +32,7 @@ Lista de projetos da Prodigious global.
 Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodigious.com/<br />
 [X] Extra: Colocamos um botão de carregar mais itens de portfolio. Esta ação é possível caso sua lista seja servida com um JSON ou uma request do backend do contrário a dificuldade aumenta. Este item também não é obrigatório.<br />
 [X] Extra Responsivo: De acordo com o tamanho da tela, mostrar mais colunas. Ex: Mobile: 1 coluna, tablet duas colunas, desktop 3 colunas.<br />
-[ ] Filtro: Colocamos um filtro de categorias(campo azul com all escrito), mas é um extra caso você esteja listando os elementos a partir de um JSON. Categorias podem ser vistas em https://portfolio.prodigious.com/ também, use sua criatividade, mas não é uma feature obrigatória.<br />
+[X] Filtro: Colocamos um filtro de categorias(campo azul com all escrito), mas é um extra caso você esteja listando os elementos a partir de um JSON. Categorias podem ser vistas em https://portfolio.prodigious.com/ também, use sua criatividade, mas não é uma feature obrigatória.<br />
 
 ## Formulário
 
@@ -46,3 +46,14 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 [X] Elemento presente no load da tela, fixo(fixed) na parte de baixo da viewport.<br />
 [X] Ao clickar no botão elemento deve ser excluído da tela.<br />
 [X] Extra: Ao recarregar a tela, caso o usuário já tenha aceitado o uso de cookies, a layer não deve aparecer mais. Execute essa tarefa como quiser.
+
+## PROBLEMAS
+
+- quando em 1 item, o hover não funciona direito no portfolio display row;
+- botões na navbar não abrem as sessões quando clicados;
+- cor não fica randomizada quando passada pra o elemento no .map
+- arrumar imagens dentro das vivs do portfolio
+- alertas de erros do formulário de contato bagunça o layout
+- fonte Gotham
+- videos - colocar o play em cima, fazer scroll de vídeos.
+- ponta apontando pra baixo

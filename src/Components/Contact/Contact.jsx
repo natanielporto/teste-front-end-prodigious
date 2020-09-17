@@ -20,10 +20,13 @@ const Contact = () => {
     <StyledContainer>
       {form && (
         <form>
-          <div className="d-flex justify-content-between">
+          <div className="styledDiv">
             <div className="form-group">
               <div className="d-flex">
-                <label for="exampleFormControlInput1" className="styledLabel">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="styledLabel"
+                >
                   Name:
                 </label>
               </div>
@@ -39,7 +42,10 @@ const Contact = () => {
             </div>
             <div className="form-group mb-3">
               <div className="d-flex">
-                <label for="exampleFormControlInput1" className="styledLabel">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="styledLabel"
+                >
                   Phone:
                 </label>
               </div>
@@ -60,7 +66,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="form-group mb-3">
-            <label for="exampleFormControlInput1" className="styledLabel">
+            <label htmlFor="exampleFormControlInput1" className="styledLabel">
               E-mail:
             </label>
             <StyledInput
@@ -80,7 +86,7 @@ const Contact = () => {
             )}
           </div>
           <div className="form-group mb-3">
-            <label for="exampleFormControlInput1" className="styledLabel">
+            <label htmlFor="exampleFormControlInput1" className="styledLabel">
               Message:
             </label>
             <StyledTextArea

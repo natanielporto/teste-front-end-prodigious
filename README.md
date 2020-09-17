@@ -24,7 +24,7 @@ Os controles do player podem ser nativos, não precisa customizar nada.<br />
 ## Texto descritivo
 
 [X] Parágrafo símples com alguns trechos em destaque.<br />
-[ ] Extra Responsivo: A fonte deve se adaptar aos diferentes tamanhos de tela.<br />
+[X] Extra Responsivo: A fonte deve se adaptar aos diferentes tamanhos de tela.<br />
 
 ## Portfólio
 
@@ -55,5 +55,11 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 - arrumar imagens dentro das vivs do portfolio
 - alertas de erros do formulário de contato bagunça o layout
 - fonte Gotham
-- videos - colocar o play em cima, fazer scroll de vídeos.
 - ponta apontando pra baixo
+- HEIGHT VERSÃO TABLET TÁ TRANCADO
+- BOTÕES NÃO APARECEM NO ABOUT POR ALGUM MOTIVO ESTRANHO
+
+- foi considerado tela:
+  grande: 1980px (a minha e a mais comum segundo pesquisa)
+  média: 768px (ipad segundo pesquisa)
+  pequena: 600px (smartphone segundo pesquisa - sim, existe o iphone 5s, mas acho que já dá pra mostrar que eu sei trabalhar um pouco com media queries)

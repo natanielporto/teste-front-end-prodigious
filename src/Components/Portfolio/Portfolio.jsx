@@ -21,7 +21,7 @@ const Portfolio = () => {
   const [names, setNames] = useState(data);
   const [arr, setArr] = useState(imgs);
   const [number, setNumber] = useState(19);
-  const [row, setRow] = useState(false);
+  const [row, setRow] = useState(true);
 
   const treatNames = names.map((el) => el.split(".")).map((el) => el[0]);
 
@@ -54,9 +54,12 @@ const Portfolio = () => {
       {!row && (
         <StyledDiv className="row">
           {arr.slice(0, Number(number)).map((el, index) => (
-            <WorkContainer className="col-4 m-0 p-0">
+            <WorkContainer
+              className="col-lg-4 col-md-6 col- m-0 p-0"
+              key={index}
+            >
               <StyledEffect
-                color={color[Math.floor(Math.random() * color.length)]}
+                color={color[Math.floor(Math.random() * (color.length - 1))]}
               >
                 {treatNames[index].toUpperCase()}
               </StyledEffect>
@@ -70,27 +73,27 @@ const Portfolio = () => {
           ))}
           <StateButtons>
             <StyledInput
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               type="text"
               placeholder="Search by brand"
               onKeyDown={handleSearch}
             />
             <StyledButton
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleToRow}
             >
-              {row ? "Display: big" : "Display: rows"}
+              {row ? "Cards" : "Rows"}
             </StyledButton>
             <StyledButton
               disabled={number < arr.length ? false : true}
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleMore}
             >
               Show more?
             </StyledButton>
             <StyledButton
-              isabled={arr < 10 || number < 10 ? true : false}
-              color={color[Math.floor(Math.random() * color.length)]}
+              disabled={arr < 10 || number < 10 ? true : false}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleMore}
             >
               Show less?
@@ -101,12 +104,12 @@ const Portfolio = () => {
       {row && (
         <StyledDivRow className="row">
           {arr.slice(0, Number(number)).map((el, index) => (
-            <WorkContainerRow className="col-4">
+            <WorkContainerRow key={index} className="col-xl-4 col-sm-12">
               <div>
                 <StyledImgRow src={`/Imgs/${el}`} />
               </div>
               <StyledEffectRow
-                color={color[Math.floor(Math.random() * color.length)]}
+                color={color[Math.floor(Math.random() * (color.length - 1))]}
               >
                 {treatNames[index].toUpperCase()}
               </StyledEffectRow>
@@ -114,27 +117,27 @@ const Portfolio = () => {
           ))}
           <StateButtons>
             <StyledInput
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               type="text"
               placeholder="Search by brand"
               onKeyDown={handleSearch}
             />
             <StyledButton
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleToRow}
             >
-              {row ? "Display: big" : "Display: rows"}
+              {row ? "Cards" : "Rows"}
             </StyledButton>
             <StyledButton
               disabled={number < arr.length ? false : true}
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleMore}
             >
               Show more?
             </StyledButton>
             <StyledButton
               disabled={arr < 10 || number < 10 ? true : false}
-              color={color[Math.floor(Math.random() * color.length)]}
+              color={color[Math.floor(Math.random() * (color.length - 1))]}
               onClick={handleMore}
             >
               Show less?

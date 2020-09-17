@@ -7,6 +7,7 @@ import {
   StyledTextPart,
   StyledDiv,
   StyledButton,
+  StyledBtn,
 } from "./About";
 
 const About = () => {
@@ -46,18 +47,45 @@ const About = () => {
     }
   };
 
+  const btnClick = [
+    { id: "1", url: videoPresentation },
+    { id: "2", url: "https://www.youtube.com/watch?v=ycPr5-27vSI" },
+    { id: "3", url: "https://www.youtube.com/watch?v=EYYdQB0mkEU" },
+    { id: "4", url: "https://www.youtube.com/watch?v=szD6dQPvRuE" },
+    { id: "5", url: "https://www.youtube.com/watch?v=SsEn0hlKDKA" },
+  ];
+
+  const letras = ["a", "b", "c"];
+
+  console.log(btnClick);
+
+  const handleSelect = ({ target }) => {
+    console.log(target.key);
+  };
+
   return (
     <>
       <StyledDiv>
-        <StyledVideo>
-          <ReactPlayer
-            controls
-            width="640px"
-            height="480px"
-            url={video}
-            alt="Capa vídeo Prodigious"
-          />
-        </StyledVideo>
+        <div>
+          <StyledVideo>
+            <ReactPlayer
+              controls
+              width="100%"
+              height="100%"
+              url={video}
+              alt="Capa vídeo Prodigious"
+            />
+          </StyledVideo>
+          {btnClick.map((el) => {
+            <StyledBtn
+              style={{ background: "purple" }}
+              key={el.id}
+              onClick={handleSelect}
+            >
+              {el.id}
+            </StyledBtn>;
+          })}
+        </div>
         <StyledParagraph>
           We design, produce and deliver{" "}
           <StyledTextPart>brand content</StyledTextPart> across{" "}

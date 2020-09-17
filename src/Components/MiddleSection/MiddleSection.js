@@ -1,22 +1,24 @@
 import styled from "styled-components";
 
-export const StyledVideo = styled.section`
-  margin-top: 12px;
-  max-width: 300px;
-`;
-
-export const StyledContainer = styled.section`
-  margin: 40px auto;
+export const StyledContainerTop = styled.section`
+  display: flex;
+  margin: 32px 0;
+  justify-content: center;
   color: ${(props) => (props.color ? props.color : "white")};
+
+  @media (max-width: 768px) {
+    margin: 16px 0 0 0;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-export const StyledParagraph = styled.text`
-  max-width: 850px;
-  font-size: 32px;
-  color: black;
-`;
-
-export const StyledTextPart = styled.text`
-  color: red;
-  font-weight: 700;
+export const StyledContainerBottom = styled.section`
+  display: flex;
+  margin: 32px 0;
+  justify-content: center;
+  color: ${(props) => (props.color ? props.color : "white")};
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;

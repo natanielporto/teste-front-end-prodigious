@@ -5,8 +5,13 @@ export const Navbar = styled.header`
   justify-content: space-around;
   align-items: center;
   background-color: #e5e5e5;
-  width: 100%;
   height: 70px;
+
+  @media (max-width: 768px) {
+    width: 768px;
+    height: 100px;
+    margin: 0;
+  }
 `;
 
 export const StyledH1 = styled.button`
@@ -28,6 +33,12 @@ export const StyledButton = styled.button`
   -webkit-transition: max-width 1s;
   transition: max-width 1s;
 
+  @media (max-width: 768px) {
+    max-width: 40px;
+    font-size: 1.1em;
+    height: 40px;
+  }
+
   &:hover {
     max-width: 140px;
     color: white;
@@ -41,5 +52,6 @@ export const StyledButton = styled.button`
     border-radius: 6px;
     opacity: 1;
     max-width: 140px;
+    outline: none;
   }
 `;

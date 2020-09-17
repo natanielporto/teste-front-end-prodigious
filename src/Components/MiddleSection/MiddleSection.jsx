@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledContainer } from "./MiddleSection";
+import { StyledContainerTop, StyledContainerBottom } from "./MiddleSection";
 import About from "../About/About.jsx";
 import Portfolio from "../Portfolio/Portfolio.jsx";
 import Contact from "../Contact/Contact.jsx";
@@ -10,7 +10,7 @@ const MiddleSection = () => {
   const [btns, setBtns] = useState([
     { id: 1, name: "\\ About", bg: true },
     { id: 2, name: "\\ Portfolio", bg: false },
-    { id: 3, name: "\\ Contact", bg: false },
+    { id: 3, name: "\\ Contact us", bg: false },
     { id: 4, name: "\\ Our Network", bg: false },
   ]);
 
@@ -38,22 +38,23 @@ const MiddleSection = () => {
 
   return (
     <>
-      <StyledContainer color="black">
+      <StyledContainerTop color="black">
         {btns.map((el) => (
           <SectionTabs
             key={el.id}
             handleCheck={handleCheck}
             name={el.name}
             bg={el.bg}
+            className="col-md-6 col-lg-3"
           />
         ))}
-      </StyledContainer>
-      <StyledContainer>
+      </StyledContainerTop>
+      <StyledContainerBottom>
         {btns[0].bg && <About />}
         {btns[1].bg && <Portfolio />}
         {btns[2].bg && <Contact />}
         {btns[3].bg && <Network />}
-      </StyledContainer>
+      </StyledContainerBottom>
     </>
   );
 };

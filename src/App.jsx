@@ -4,7 +4,6 @@ import NavBar from "./Components/NavBar/NavBar.jsx";
 import MiddleSection from "./Components/MiddleSection/MiddleSection.jsx";
 import Cookies from "./Components/Cookies/Cookies.jsx";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { StyledFooter } from "./App";
 
 let cookieWarn = false;
 
@@ -20,15 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <NavBar />
-      </header>
-      <body>
-        <MiddleSection />
-      </body>
-      <StyledFooter>
-        <div>{cookie && <Cookies handleCookies={handleCookies} />}</div>
-      </StyledFooter>
+      <NavBar />
+      <MiddleSection />
+      <div>{cookie && <Cookies handleCookies={handleCookies} />}</div>
     </div>
   );
 }

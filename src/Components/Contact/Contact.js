@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const StyledContainer = styled.section`
   color: black;
   min-width: 500px;
-  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +23,11 @@ export const StyledInput = styled.input`
   &:focus::placeholder {
     color: #fd2d39;
   }
+
+  @media (max-width: 768px) {
+    height: 50px;
+    font-size: 1.5em;
+  }
 `;
 
 export const StyledTextArea = styled.textarea`
@@ -41,6 +45,10 @@ export const StyledTextArea = styled.textarea`
   &:focus::placeholder {
     color: #fd2d39;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1.5em;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -55,11 +63,16 @@ export const StyledButton = styled.button`
   &:active {
     background: #fd2d39;
   }
+
+  @media (max-width: 768px) {
+    height: 80px;
+    font-size: 2em;
+  }
 `;
 
 export const WarnSpan = styled.span`
   color: #fd2d39;
-  font-size: 14px;
+  font-size: 0.8em;
 `;
 
 export const StyledH3 = styled.h3`
@@ -73,4 +86,9 @@ export const StyledH3 = styled.h3`
   color: white;
   padding: 16px;
   margin-bottom: 16px;
+
+  @media (max-width: 768px) {
+    height: 200px;
+    font-size: 2em;
+  }
 `;

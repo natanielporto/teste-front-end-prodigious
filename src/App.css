@@ -5,10 +5,10 @@ body {
   position: relative;
   height: 100vh;
 }
-
+/* 
 header {
   margin: 0 !important;
-}
+} */
 
 .styledLabel {
   color: #572185;

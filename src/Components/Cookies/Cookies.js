@@ -19,6 +19,10 @@ export const StyledSection = styled.section`
     font-size: 1.5em;
     bottom: 0;
   }
+
+  @media (max-width: 375px) {
+    padding-bottom: 10px;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -36,5 +40,15 @@ export const StyledButton = styled.button`
     height: 60px;
     margin-top: 16px;
     font-size: 1.5em;
+  }
+
+  @media (max-width: 375px) {
+    width: 150px;
+    height: 35px;
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;

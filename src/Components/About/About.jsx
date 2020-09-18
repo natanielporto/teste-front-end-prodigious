@@ -60,7 +60,7 @@ const About = () => {
   console.log(btnClick);
 
   const handleSelect = ({ target }) => {
-    console.log(target.key);
+    console.log(target.innerText);
   };
 
   return (
@@ -76,15 +76,15 @@ const About = () => {
               alt="Capa vídeo Prodigious"
             />
           </StyledVideo>
-          {btnClick.map((el) => {
+          {btnClick.map((el) => (
             <StyledBtn
               style={{ background: "purple" }}
               key={el.id}
               onClick={handleSelect}
             >
               {el.id}
-            </StyledBtn>;
-          })}
+            </StyledBtn>
+          ))}
         </div>
         <StyledParagraph>
           We design, produce and deliver{" "}

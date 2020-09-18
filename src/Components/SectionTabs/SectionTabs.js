@@ -13,6 +13,12 @@ export const StyledButton = styled.button`
     width: 400px;
   }
 
+  @media (max-width: 375px) {
+    font-size: 2em;
+    width: 100%;
+    font-size: 1.5em;
+  }
+
   &:focus {
     outline: none;
   }

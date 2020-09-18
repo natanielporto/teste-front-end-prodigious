@@ -62,4 +62,4 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 - foi considerado tela:
   grande: 1980px (a minha e a mais comum segundo pesquisa)
   média: 768px (ipad segundo pesquisa)
-  pequena: 600px (smartphone segundo pesquisa - sim, existe o iphone 5s, mas acho que já dá pra mostrar que eu sei trabalhar um pouco com media queries)
+  pequena: 375px (iPhoneX - não o menor, não o maior)

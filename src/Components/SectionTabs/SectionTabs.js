@@ -5,18 +5,17 @@ export const StyledButton = styled.button`
   border: none;
   font-weight: 900;
   margin: 0 32px;
-  background: ${({ bg }) => (bg ? "black" : "transparent")};
-  color: ${({ bg }) => (bg ? "white" : "black")};
+  background: transparent;
 
   @media (max-width: 768px) {
     font-size: 2em;
-    width: 400px;
+    min-width: 510px;
+    margin: auto;
   }
 
   @media (max-width: 375px) {
-    font-size: 2em;
-    width: 100%;
-    font-size: 1.5em;
+    min-width: 350px;
+    font-size: 2.5em;
   }
 
   &:focus {

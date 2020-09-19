@@ -24,10 +24,17 @@ export const StyledVideo = styled.section`
   }
 `;
 
-export const StyledBtn = styled.button`
-  color: black;
-  background: orange;
-  width: 150px;
+export const StyledRoundBtn = styled.button`
+  margin: 8px;
+  background: transparent;
+  color: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const StyledParagraph = styled.span`

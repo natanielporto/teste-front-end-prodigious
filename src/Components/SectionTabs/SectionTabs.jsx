@@ -1,12 +1,8 @@
 import React from "react";
 import { StyledButton } from "./SectionTabs";
 
-const SectionTabs = ({ name, bg, handleCheck }) => {
-  return (
-    <StyledButton onClick={handleCheck} bg={bg}>
-      {name}
-    </StyledButton>
-  );
+const SectionTabs = ({ name, handleCheck }) => {
+  return <StyledButton onClick={handleCheck}>{name}</StyledButton>;
 };
 
 export default SectionTabs;

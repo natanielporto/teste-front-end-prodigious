@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import {
+  StyledFormWrapper,
   StyledContainer,
   StyledInput,
   StyledTextArea,
   StyledButton,
   WarnSpan,
   StyledH3,
+  StyledResponseWrapper,
 } from "./Contact";
 
 const Contact = () => {
@@ -20,16 +22,11 @@ const Contact = () => {
     <StyledContainer>
       {form && (
         <form>
-          <div className="styledDiv">
+          <StyledFormWrapper>
             <div className="form-group">
-              <div className="d-flex">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="styledLabel"
-                >
-                  Name:
-                </label>
-              </div>
+              <label htmlFor="exampleFormControlInput1" className="styledLabel">
+                Name:
+              </label>
               <StyledInput
                 type="text"
                 name="personName"
@@ -41,14 +38,9 @@ const Contact = () => {
               )}
             </div>
             <div className="form-group mb-3">
-              <div className="d-flex">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="styledLabel"
-                >
-                  Phone:
-                </label>
-              </div>
+              <label htmlFor="exampleFormControlInput1" className="styledLabel">
+                Phone:
+              </label>
               <StyledInput
                 type="text"
                 className="form-control shadow-none"
@@ -64,7 +56,7 @@ const Contact = () => {
                 <WarnSpan>(field empty or information invalid)</WarnSpan>
               )}
             </div>
-          </div>
+          </StyledFormWrapper>
           <div className="form-group mb-3">
             <label htmlFor="exampleFormControlInput1" className="styledLabel">
               E-mail:
@@ -99,18 +91,20 @@ const Contact = () => {
               <WarnSpan>(field empty or information invalid)</WarnSpan>
             )}
           </div>
-          <StyledButton onClick={handleSubmit(onSubmit)} className="mt-2">
-            Send
-          </StyledButton>
+          <div className="d-flex justify-content-around">
+            <StyledButton onClick={handleSubmit(onSubmit)} className="mt-2">
+              Send
+            </StyledButton>
+          </div>
         </form>
       )}
       {!form && (
-        <div>
+        <StyledResponseWrapper>
           <StyledH3>Mensagem enviada com sucesso!</StyledH3>
           <StyledButton onClick={handleNewMessage}>
             Enviar outra mensagem
           </StyledButton>
-        </div>
+        </StyledResponseWrapper>
       )}
     </StyledContainer>
   );

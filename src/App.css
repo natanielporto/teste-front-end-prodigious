@@ -5,30 +5,16 @@ body {
   position: relative;
   height: 100vh;
 }
-/* 
-header {
-  margin: 0 !important;
-} */
 
 .styledLabel {
   color: #572185;
   font-weight: 700;
 }
 
-.styledDiv {
-  display: flex;
-  justify-content: space-between;
-}
-
 @media (max-width: 768px) {
   body {
     width: 100%;
     overflow: hidden;
-  }
-
-  .styledDiv {
-    display: inline-block;
-    width: 600px;
   }
 }
 

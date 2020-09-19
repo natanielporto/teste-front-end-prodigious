@@ -20,7 +20,7 @@ const MiddleSection = () => {
     { id: 4, name: "\\ Our Network" },
   ];
 
-  const [isOpen, setOpen] = useState(null);
+  const [isOpen, setOpen] = useState("\\ Contact us");
 
   const handleCheck = ({ target }) => {
     const changeTo = target.innerText;

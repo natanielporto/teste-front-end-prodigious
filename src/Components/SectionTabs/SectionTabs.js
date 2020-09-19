@@ -16,6 +16,8 @@ export const StyledButton = styled.button`
   @media (max-width: 375px) {
     min-width: 350px;
     font-size: 2.5em;
+    width: 375px;
+    margin: 0;
   }
 
   &:focus {

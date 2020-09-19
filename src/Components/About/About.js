@@ -8,19 +8,38 @@ export const StyledDiv = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
   }
+
+  @media (max-width: 375px) {
+    width: 375px;
+    margin: 0;
+  }
+`;
+
+export const StyledVideoWrapper = styled.section`
+  margin-top: 72px;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 375px) {
+    height: 315px;
+  }
 `;
 
 export const StyledVideo = styled.section`
-  margin-top: 12px;
-  width: 640px;
-  margin-right: 40px;
-  margin-bottom: 16px;
+  margin: 12px 40px 16px 0;
 
   @media (max-width: 768px) {
-    height: 300px;
     display: flex;
     margin: 16px 0;
     justify-content: center;
+  }
+
+  @media (max-width: 375px) {
+    width: 375px;
+    height: 210px;
+    padding-top: 24px;
   }
 `;
 
@@ -28,9 +47,14 @@ export const StyledRoundBtn = styled.button`
   margin: 8px;
   background: transparent;
   color: transparent;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 25px;
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
 
   &:focus {
     outline: none;
@@ -49,6 +73,10 @@ export const StyledParagraph = styled.span`
     text-align: center;
     margin: 0;
   }
+
+  @media (max-width: 375px) {
+    width: 90%;
+  }
 `;
 
 export const StyledTextPart = styled.span`
@@ -56,24 +84,17 @@ export const StyledTextPart = styled.span`
   font-weight: 700;
 `;
 
-export const StyledButton = styled.button`
-  border: none;
-  border-radius: 5px;
-  background: red;
-  color: white;
-  margin-left: 16px;
+export const StyledVideoSelector = styled.span`
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 640px;
 
   @media (max-width: 768px) {
-    margin-top: 24px;
-    width: 350px;
-    height: 60px;
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &:active {
-    background: #f68720;
+  @media (max-width: 375px) {
+    width: 375px;
+    margin-top: 0;
   }
 `;

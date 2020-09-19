@@ -10,6 +10,13 @@ export const StyledContainerTop = styled.section`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 375px;
+  }
 `;
 
 export const StyledIdleContainerTop = styled.section`

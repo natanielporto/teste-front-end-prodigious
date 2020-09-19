@@ -31,3 +31,9 @@ header {
     width: 600px;
   }
 }
+
+@media (max-width: 768px) {
+  #videoSelector {
+    height: 80% !important;
+  }
+}

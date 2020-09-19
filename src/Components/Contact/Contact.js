@@ -6,6 +6,14 @@ export const StyledContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    margin-top: 16px;
+  }
+
+  @media (max-width: 375px) {
+    width: 375px;
+  }
 `;
 
 export const StyledInput = styled.input`

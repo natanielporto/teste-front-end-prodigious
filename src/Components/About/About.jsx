@@ -6,8 +6,9 @@ import {
   StyledParagraph,
   StyledTextPart,
   StyledDiv,
-  StyledButton,
   StyledRoundBtn,
+  StyledVideoSelector,
+  StyledVideoWrapper,
 } from "./About";
 
 const About = () => {
@@ -44,27 +45,23 @@ const About = () => {
   return (
     <>
       <StyledDiv>
-        <div>
+        <StyledVideoWrapper>
           <StyledVideo>
             <ReactPlayer
               controls
-              min-width="100%"
-              min-height="367px"
               url={url}
               alt="Capa vídeo Prodigious"
+              id="videoSelector"
             />
           </StyledVideo>
-          <div
-            className="d-flex justify-content-center m-0"
-            style={{ width: "640px" }}
-          >
+          <StyledVideoSelector>
             {video.map((el) => (
               <StyledRoundBtn key={el.id} onClick={handleSelect}>
                 {el.id}
               </StyledRoundBtn>
             ))}
-          </div>
-        </div>
+          </StyledVideoSelector>
+        </StyledVideoWrapper>
         <StyledParagraph>
           We design, produce and deliver{" "}
           <StyledTextPart>brand content</StyledTextPart> across{" "}

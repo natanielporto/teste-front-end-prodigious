@@ -1,0 +1,20 @@
+.modal-prodigious {
+  position: fixed;
+  top: 9%;
+  left: 9.5%;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  color: white;
+}
+
+.overlay-prodigious {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}

@@ -61,7 +61,6 @@ const MiddleSection = () => {
           {isOpen === '\\ Our Network' && <Network />}
         </StyledContainerBottom>
       </StyledBig>
-
       {/* Renders when in celphone mode */}
       <StyledSmall>
         <StyledContainerTop>

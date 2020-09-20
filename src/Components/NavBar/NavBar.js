@@ -43,13 +43,13 @@ export const LiContainer = styled.div`
 `;
 
 export const BurguerContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  color: black;
+  display: none;
 
-  @media (min-width: 376px) {
-    display: none;
+  @media (max-width: 375px) {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
   }
 `;
 

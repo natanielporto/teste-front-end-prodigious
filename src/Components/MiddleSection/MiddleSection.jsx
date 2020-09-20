@@ -1,26 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   StyledContainerTop,
   StyledIdleContainerTop,
   StyledContainerBottom,
   StyledBig,
   StyledSmall,
-} from "./MiddleSection";
-import About from "../About/About.jsx";
-import Portfolio from "../Portfolio/Portfolio.jsx";
-import Contact from "../Contact/Contact.jsx";
-import Network from "../Network/Network.jsx";
-import SectionTabs from "../SectionTabs/SectionTabs.jsx";
+} from './MiddleSection';
+import About from '../About/About.jsx';
+import Portfolio from '../Portfolio/Portfolio.jsx';
+import Contact from '../Contact/Contact.jsx';
+import Network from '../Network/Network.jsx';
+import SectionTabs from '../SectionTabs/SectionTabs.jsx';
 
 const MiddleSection = () => {
   const btns = [
-    { id: 1, name: "\\ About" },
-    { id: 2, name: "\\ Portfolio" },
-    { id: 3, name: "\\ Contact us" },
-    { id: 4, name: "\\ Our Network" },
+    { id: 1, name: '\\ About' },
+    { id: 2, name: '\\ Portfolio' },
+    { id: 3, name: '\\ Contact us' },
+    { id: 4, name: '\\ Our Network' },
   ];
 
-  const [isOpen, setOpen] = useState("\\ Contact us");
+  const [isOpen, setOpen] = useState(null);
 
   const handleCheck = ({ target }) => {
     const changeTo = target.innerText;
@@ -32,7 +32,7 @@ const MiddleSection = () => {
       {/* Renders if bigget than celphone mode */}
       <StyledBig>
         {isOpen === null && (
-          <StyledIdleContainerTop color="black">
+          <StyledIdleContainerTop color='black'>
             {btns.map((el) => (
               <SectionTabs
                 key={el.id}
@@ -43,22 +43,22 @@ const MiddleSection = () => {
           </StyledIdleContainerTop>
         )}
         {isOpen !== null && (
-          <StyledContainerTop color="black">
+          <StyledContainerTop color='black'>
             {btns.map((el) => (
               <SectionTabs
                 key={el.id}
                 name={el.name}
                 handleCheck={handleCheck}
-                className="col-md-6 col-lg-3"
+                className='col-md-6 col-lg-3'
               />
             ))}
           </StyledContainerTop>
         )}
         <StyledContainerBottom>
-          {isOpen === "\\ About" && <About />}
-          {isOpen === "\\ Portfolio" && <Portfolio />}
-          {isOpen === "\\ Contact us" && <Contact />}
-          {isOpen === "\\ Our Network" && <Network />}
+          {isOpen === '\\ About' && <About />}
+          {isOpen === '\\ Portfolio' && <Portfolio />}
+          {isOpen === '\\ Contact us' && <Contact />}
+          {isOpen === '\\ Our Network' && <Network />}
         </StyledContainerBottom>
       </StyledBig>
 
@@ -67,28 +67,28 @@ const MiddleSection = () => {
         <StyledContainerTop>
           <SectionTabs
             handleCheck={handleCheck}
-            name="\ About"
-            className="col-md-6 col-lg-3"
+            name='\ About'
+            className='col-md-6 col-lg-3'
           />
-          {isOpen === "\\ About" && <About />}
+          {isOpen === '\\ About' && <About />}
           <SectionTabs
             handleCheck={handleCheck}
-            name="\ Portfolio"
-            className="col-md-6 col-lg-3"
+            name='\ Portfolio'
+            className='col-md-6 col-lg-3'
           />
-          {isOpen === "\\ Portfolio" && <Portfolio />}
+          {isOpen === '\\ Portfolio' && <Portfolio />}
           <SectionTabs
             handleCheck={handleCheck}
-            name="\ Contact us"
-            className="col-md-6 col-lg-3"
+            name='\ Contact us'
+            className='col-md-6 col-lg-3'
           />
-          {isOpen === "\\ Contact us" && <Contact />}
+          {isOpen === '\\ Contact us' && <Contact />}
           <SectionTabs
             handleCheck={handleCheck}
-            name="\ Our Network"
-            className="col-md-6 col-lg-3"
+            name='\ Our Network'
+            className='col-md-6 col-lg-3'
           />
-          {isOpen === "\\ Our Network" && <Network />}
+          {isOpen === '\\ Our Network' && <Network />}
         </StyledContainerTop>
       </StyledSmall>
     </>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Navbar = styled.header`
   background-color: #e5e5e5;
@@ -24,16 +24,18 @@ export const StyledLogo = styled.img`
   justify-content: space-around;
   background-color: #e5e5e5;
   border: none;
+  cursor: pointer;
 
   @media (min-width: 376px) {
     width: 200px;
   }
 `;
 
-export const BtnContainer = styled.div`
+export const LiContainer = styled.div`
   display: none;
 
   @media (min-width: 376px) {
+    margin-top: 12px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -51,9 +53,21 @@ export const BurguerContainer = styled.div`
   }
 `;
 
-export const StyledButton = styled.button`
+export const StyledA = styled.a`
+  color: transparent;
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+`;
+
+export const StyledLi = styled.li`
   background-color: black;
   margin: 8px;
+  padding: 8px;
   background-color: ${(props) => props.color};
   color: ${(props) => props.color};
   border: none;
@@ -63,6 +77,7 @@ export const StyledButton = styled.button`
   opacity: 0.3;
   max-width: 40px;
   height: 40px;
+  cursor: pointer;
   -webkit-transition: max-width 1s;
   transition: max-width 1s;
 
@@ -76,13 +91,5 @@ export const StyledButton = styled.button`
     border-radius: 6px;
     opacity: 1;
     transition: 1s;
-  }
-
-  &:focus {
-    color: white;
-    border-radius: 6px;
-    opacity: 1;
-    max-width: 140px;
-    outline: none;
   }
 `;

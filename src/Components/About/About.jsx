@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import videoPresentation from "../../Assets/video.mp4";
-import ReactPlayer from "react-player";
+import React, { useState, useEffect } from 'react';
+import videoPresentation from '../../Assets/video.mp4';
+import ReactPlayer from 'react-player';
 import {
   StyledVideo,
   StyledParagraph,
@@ -9,29 +9,29 @@ import {
   StyledRoundBtn,
   StyledVideoSelector,
   StyledVideoWrapper,
-} from "./About";
+} from './About';
 
 const About = () => {
   const [video, setVideo] = useState([
     { id: 1, video: videoPresentation, play: true },
     {
       id: 2,
-      video: "https://www.youtube.com/watch?v=ycPr5-27vSI",
+      video: 'https://www.youtube.com/watch?v=ycPr5-27vSI',
       play: false,
     },
     {
       id: 3,
-      video: "https://www.youtube.com/watch?v=EYYdQB0mkEU",
+      video: 'https://www.youtube.com/watch?v=EYYdQB0mkEU',
       play: false,
     },
     {
       id: 4,
-      video: "https://www.youtube.com/watch?v=szD6dQPvRuE",
+      video: 'https://www.youtube.com/watch?v=szD6dQPvRuE',
       play: false,
     },
     {
       id: 5,
-      video: "https://www.youtube.com/watch?v=SsEn0hlKDKA",
+      video: 'https://www.youtube.com/watch?v=SsEn0hlKDKA',
       play: false,
     },
   ]);
@@ -50,8 +50,8 @@ const About = () => {
             <ReactPlayer
               controls
               url={url}
-              alt="Capa vídeo Prodigious"
-              id="videoSelector"
+              alt='Capa vídeo Prodigious'
+              id='videoSelector'
             />
           </StyledVideo>
           <StyledVideoSelector>
@@ -63,8 +63,8 @@ const About = () => {
           </StyledVideoSelector>
         </StyledVideoWrapper>
         <StyledParagraph>
-          We design, produce and deliver{" "}
-          <StyledTextPart>brand content</StyledTextPart> across{" "}
+          We design, produce and deliver{' '}
+          <StyledTextPart>brand content</StyledTextPart> across{' '}
           <StyledTextPart>all channels</StyledTextPart>, using the best talent,
           processes and tools. The result? Seamless global execution of multiple
           content type across <StyledTextPart>all markets</StyledTextPart>,

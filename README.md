@@ -1,10 +1,6 @@
 ### `yarn start`
 
-Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ## Header
 
@@ -49,15 +45,13 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 
 ## PROBLEMAS
 
-- quando em 1 item, o hover não funciona direito no portfolio display row;
 - botões na navbar não abrem as sessões quando clicados;
-- cor não fica randomizada quando passada pra o elemento no .map
-- arrumar imagens dentro das vivs do portfolio
+- cor não fica randomizada nos cabeçalhos e rodapés
 - alertas de erros do formulário de contato bagunça o layout
 - fonte Gotham
 - ponta apontando pra baixo
-- HEIGHT VERSÃO TABLET TÁ TRANCADO
-- BOTÕES NÃO APARECEM NO ABOUT POR ALGUM MOTIVO ESTRANHO
+
+## RESPONSIVIDADE
 
 - foi considerado tela:
   grande: 1980px (a minha e a mais comum segundo pesquisa)

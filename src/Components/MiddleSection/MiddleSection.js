@@ -25,7 +25,6 @@ export const StyledIdleContainerTop = styled.section`
   margin-top: 10%;
 
   @media (max-width: 768px) {
-    background: red;
     margin-top: 30%;
     font-size: 2em;
     text-align-last: left;

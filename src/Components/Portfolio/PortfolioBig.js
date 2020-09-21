@@ -3,15 +3,15 @@ import styled from 'styled-components';
 export const StyledDiv = styled.div`
   padding: 0;
   margin: 0;
-  height: 355px;
+  min-height: 355px;
   display: flex;
   justify-content: center;
 
   @media (max-width: 768px) {
-    height: 120px;
+    /* height: 120px; */
+    height: 100%;
     margin: 16px 0 9% 0;
     padding: 0;
-    height: 100%;
   }
 `;
 
@@ -35,8 +35,10 @@ export const StyledEffect = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 90px;
+  z-index: 2;
   -webkit-transition: height 1s;
   transition: height 1s;
+  position: relative;
 
   ${WorkContainer}:hover & {
     background-color: ${(props) => props.color};
@@ -48,8 +50,27 @@ export const StyledEffect = styled.div`
     }
   }
 
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: rotate(45deg) translateX(-50%);
+    bottom: -20px;
+    left: 50%;
+    background-color: inherit;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      height: 25px;
+      width: 25px;
+      bottom: -21px;
+    }
+  }
+
   @media (max-width: 768px) {
     height: 60px;
+    overflow: hidden;
   }
 
   @media (max-width: 375px) {
@@ -66,7 +87,6 @@ export const StyledEffectBottom = styled.div`
   background: black;
   color: white;
   justify-content: space-between;
-  padding: 0 24px;
   align-items: center;
   height: 90px;
   font-size: 1.5em;

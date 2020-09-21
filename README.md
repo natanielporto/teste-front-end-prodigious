@@ -4,18 +4,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Header
 
-[ ] Logo e Menu hambúrguer. Quando clickarmos no menu, uma layer deve ser aberta e o menu exibido exatamente de acordo com o elemento do layout.<br />
-[ ] Os links do menu são fictícios, crie somente a navegação e seus elementos de forma semântica e acessível.<br />
-[ ] Ao clickar no botão fechar, deve fechar o menu como de praxe.<br />
+[X] Logo e Menu hambúrguer. Quando clickarmos no menu, uma layer deve ser aberta e o menu exibido exatamente de acordo com o elemento do layout.<br />
+[X] Os links do menu são fictícios, crie somente a navegação e seus elementos de forma semântica e acessível.<br />
+[X] Ao clickar no botão fechar, deve fechar o menu como de praxe.<br />
 [X] Extra Responsivo: O menu deve ser hamburguer para mobile, em desktop ele deve ser visível o tempo inteiro, use seus conhecimentos de interface para isso.<br />
-[ ] Extra: Quando clickar na layer preta transparente, o menu deve ser fechado.<br />
+[X] Extra: Quando clickar na layer preta transparente, o menu deve ser fechado.<br />
 
 ## Slideshow de vídeos
 
 [X] Um player nativo deve ser executado com o vídeo em anexo. Obs: O vídeo foi retirado do site da Prodigious, para os slides seguintes, insira outros de sua preferência.<br />
 [X] Quando trocar de slide, o vídeo anterior deve ser paralizado.
 Os controles do player podem ser nativos, não precisa customizar nada.<br />
-[ ] Extra: customizar os controles.<br />
+[0] Extra: customizar os controles.<br />
 
 ## Texto descritivo
 
@@ -35,7 +35,7 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 [X] Deve ser feita a validação dos campos de acordo com seu tipo, deixamos um exemplo de erro no layout.<br />
 [X] Deve ser feito um submit em caso de formulário validado.<br />
 [X] Mensagem de sucesso deve ser mostrada após o envio.<br />
-[ ] Extra: Criar um Mock de um POST é um extra totalmente não obrigatório. Como sugestão para simular o POST indico https://www.mockable.io/<br />
+[0] Extra: Criar um Mock de um POST é um extra totalmente não obrigatório. Como sugestão para simular o POST indico https://www.mockable.io/<br />
 
 ## Cookies
 
@@ -46,10 +46,9 @@ Mais imagens, descrições etc podem ser adquiridos em: https://portfolio.prodig
 ## PROBLEMAS
 
 - botões na navbar não abrem as sessões quando clicados;
-- cor não fica randomizada nos cabeçalhos e rodapés
-- alertas de erros do formulário de contato bagunça o layout
-- fonte Gotham
-- ponta apontando pra baixo
+- cor não fica randomizada nos cabeçalhos e rodapés;
+- fonte Gotham - não rolou - não tive mais tempo de pesquisar como fazer;
+- event.preventDefault() no formulário quando no celular, não previne enviar o form. Então coloquei direto a modal.
 
 ## RESPONSIVIDADE
 

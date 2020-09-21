@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledContainer = styled.section`
   color: black;
@@ -12,7 +12,7 @@ export const StyledContainer = styled.section`
   }
 
   @media (max-width: 375px) {
-    width: 375px;
+    min-width: 375px;
   }
 `;
 
@@ -70,6 +70,8 @@ export const StyledTextArea = styled.textarea`
 export const WarnSpan = styled.span`
   color: #fd2d39;
   font-size: 0.8em;
+  position: absolute;
+  bottom: -18px;
 `;
 
 export const StyledResponseWrapper = styled.span`
@@ -120,12 +122,29 @@ export const StyledButton = styled.button`
   }
 
   @media (max-width: 375px) {
+    display: none;
+  }
+`;
+
+export const StyledButtonPhone = styled.button`
+  display: none;
+
+  @media (max-width: 375px) {
+    border: none;
+    height: 80px;
+    font-weight: 700;
+    color: white;
     border-radius: 5px;
-    width: 360px;
+    background-color: #572185;
+    width: 100%;
     font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
+
+    &:active {
+      background: #fd2d39;
+    }
   }
 `;

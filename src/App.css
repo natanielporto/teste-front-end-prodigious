@@ -1,5 +1,5 @@
 body {
-  font-family: "Montserrat" !important;
+  font-family: 'Montserrat' !important;
   position: relative;
   height: 100vh;
 }
@@ -9,14 +9,9 @@ body {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  body {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   #videoSelector {
-    height: 80% !important;
+    width: 100%;
+    height: auto !important;
   }
 }

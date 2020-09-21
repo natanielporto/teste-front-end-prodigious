@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledA = styled.a`
+export const StyledSpan = styled.span`
   text-decoration: none;
   font-weight: 900px;
   color: white;

@@ -48,6 +48,8 @@ const About = () => {
         <StyledVideoWrapper>
           <StyledVideo>
             <ReactPlayer
+              width='100%'
+              max-height='100%'
               controls
               url={url}
               alt='Capa vídeo Prodigious'
@@ -56,7 +58,11 @@ const About = () => {
           </StyledVideo>
           <StyledVideoSelector>
             {video.map((el) => (
-              <StyledRoundBtn key={el.id} onClick={handleSelect}>
+              <StyledRoundBtn
+                active={video.play}
+                key={el.id}
+                onClick={handleSelect}
+              >
                 {el.id}
               </StyledRoundBtn>
             ))}

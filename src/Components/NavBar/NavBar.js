@@ -12,10 +12,6 @@ export const Navbar = styled.header`
   @media (max-width: 768px) {
     height: 100px;
   }
-
-  @media (min-width: 769px) {
-    height: 100px;
-  }
 `;
 
 export const StyledLogo = styled.img`
@@ -53,21 +49,25 @@ export const BurguerContainer = styled.div`
   }
 `;
 
-export const StyledA = styled.a`
+export const StyledA = styled.div`
   color: transparent;
   text-decoration: none;
   font-weight: 700;
+  background: transparent;
+  border: none;
+  outline: none;
 
   &:hover {
+    outline: none;
     color: white;
     text-decoration: none;
+    padding: 8px;
   }
 `;
 
 export const StyledLi = styled.li`
   background-color: black;
   margin: 8px;
-  padding: 8px;
   background-color: ${(props) => props.color};
   color: ${(props) => props.color};
   border: none;

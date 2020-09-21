@@ -1,32 +1,42 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { MenuItems } from '../MenuItems/MenuItems';
-import { StyledA, StyledLinkContainer } from './Modal';
+import { StyledSpan, StyledLinkContainer } from './Modal';
 import './Modal.css';
 
-const Modal = ({ open, handleModal }) => {
+const btns = ['HOME', 'ABOUT', 'PORTFOLIO', 'CONTACT', 'NETWORK'];
+
+const Modal = ({ open, handleModal, type }) => {
   if (!open) return null;
 
   return ReactDom.createPortal(
     <>
-      <div className='overlay-prodigious' onClick={handleModal} />
-      <div className='modal-prodigious'>
-        <div className='d-flex justify-content-end m-4'>
-          <i className='fas fa-times fa-3x' />
-        </div>
-        <StyledLinkContainer>
-          <StyledA href='/'>HOME</StyledA>
-        </StyledLinkContainer>
-        <StyledLinkContainer>
-          <StyledA href='/portfolio'>PORTFÓLIO</StyledA>
-        </StyledLinkContainer>
-        <StyledLinkContainer>
-          <StyledA href='/contact'>CONTACT</StyledA>
-        </StyledLinkContainer>
-        <StyledLinkContainer>
-          <StyledA href='/network'>NETWORK</StyledA>
-        </StyledLinkContainer>
-      </div>
+      {type === 'hamb' && (
+        <>
+          <div className='overlay-prodigious' onClick={handleModal} />
+          <div className='modal-prodigious'>
+            <div className='d-flex justify-content-end m-4'>
+              <i className='fas fa-times fa-3x' onClick={handleModal} />
+            </div>
+            {btns.map((el, index) => (
+              <StyledLinkContainer key={index}>
+                <StyledSpan>{el}</StyledSpan>
+              </StyledLinkContainer>
+            ))}
+          </div>
+        </>
+      )}
+      {type === 'cont' && (
+        <>
+          <div className='overlay-prodigious-white' onClick={handleModal} />
+          <div className='modal-prodigious-white'>
+            <div className='d-flex justify-content-end m-4'>
+              <i className='fas fa-times fa-3x green' onClick={handleModal} />
+            </div>
+            <p className='text-thanks'>Thank you for getting in touch.</p>
+            <p className='text-thanks green'>Have a great day!</p>
+          </div>
+        </>
+      )}
     </>,
     document.getElementById('portal')
   );

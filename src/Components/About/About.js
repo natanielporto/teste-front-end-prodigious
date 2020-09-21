@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledDiv = styled.section`
   display: flex;
@@ -23,7 +23,7 @@ export const StyledVideoWrapper = styled.section`
   }
 
   @media (max-width: 375px) {
-    height: 315px;
+    height: 290px;
   }
 `;
 
@@ -35,12 +35,11 @@ export const StyledVideo = styled.section`
     margin: 16px 0;
     justify-content: center;
   }
-
   @media (max-width: 375px) {
-    width: 375px;
-    height: 210px;
-    padding-top: 24px;
+    margin: 0 0 8px 0;
+    height: 218px;
   }
+}
 `;
 
 export const StyledRoundBtn = styled.button`
@@ -51,13 +50,10 @@ export const StyledRoundBtn = styled.button`
   height: 24px;
   border-radius: 25px;
 
-  @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-  }
-
-  &:focus {
+  &:focus,
+  &:active {
     outline: none;
+    background: black;
   }
 `;
 

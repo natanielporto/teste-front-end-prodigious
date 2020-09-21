@@ -7,6 +7,7 @@
   background: rgba(0, 0, 0, 0.9);
   z-index: 1000;
   color: white;
+  border-radius: 5px;
 }
 
 .overlay-prodigious {
@@ -17,4 +18,41 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+}
+
+.modal-prodigious-white {
+  position: fixed;
+  top: 20%;
+  left: 9.5%;
+  width: 80%;
+  height: 60%;
+  background: white;
+  z-index: 1000;
+  color: black;
+  border-radius: 5px;
+}
+
+.overlay-prodigious-white {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.text-thanks {
+  padding: 0 8px;
+  margin-top: 70px;
+  font-size: 1.75em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  font-weight: 900;
+  color: #6fc730;
 }

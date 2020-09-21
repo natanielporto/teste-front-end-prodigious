@@ -77,7 +77,9 @@ const Portfolio = () => {
                 ].toUpperCase()} campaign.`}
               />
               <StyledEffectBottom color={randomColor()}>
-                {treatNames[index].toUpperCase()}
+                <span style={{ zIndex: 100000 }}>
+                  {treatNames[index].toUpperCase()}
+                </span>
                 <StyledI className='fas fa-plus' color={randomColor()} />
               </StyledEffectBottom>
             </WorkContainer>
